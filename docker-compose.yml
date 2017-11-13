@@ -1,0 +1,13 @@
+version: '3'
+
+services:  
+  testapi:
+    image: testapi    
+    container_name: TestApi
+    build:
+      context: ./src/Services/TestApi
+      dockerfile: Dockerfile
+      args:
+        source: ./build
+    ports:
+      - "5000:80"
